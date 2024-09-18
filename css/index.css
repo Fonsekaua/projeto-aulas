@@ -1,0 +1,291 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'roboto';
+    list-style: none;
+}
+
+/* Tags HTML */
+body,html {
+    position: relative;   
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+    
+}
+body{
+    overflow-y: scroll;
+}
+header {
+    color: aliceblue;
+    background-color: rgb(0, 132, 255);
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+}
+
+main {
+    display: flex;
+ 
+    background: rgb(214, 236, 255);
+}
+
+footer {
+    /* Estilos para o rodapé, caso queira adicionar */
+    background-color: black;
+    padding: 15px;
+    font-size: 10px;
+    color: aliceblue;
+
+}
+header,main,footer{
+    max-height: max-content;
+}
+nav {
+    margin: 10px;
+    display: flex;
+}
+
+fieldset {
+    border: none;
+    padding: 10px;
+    color: aliceblue;
+    border-radius: 5px;
+}
+
+legend {
+    padding: 15px;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: right;
+    color: aliceblue;
+    background-color: rgb(0, 81, 255);
+}
+
+img {
+    border-radius: 50px;
+    width: 100px;
+    background-size: cover;
+    height: 100px;
+}
+
+li {
+    padding: 15px;
+    cursor: pointer;
+}
+
+/* IDs */
+#container-b fieldset {
+    background: rgba(0, 0, 0, 0.822);
+}
+#left{
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
+    background-color: whitesmoke;
+    width: 235px;
+}
+#left li {
+    padding: 20px;
+    
+    text-align: center;
+}
+
+#left i {
+    padding: 5px;
+}
+
+#left li:hover {
+    transition: .5s;
+    background: rgba(0, 0, 0, 0.514);
+}
+
+#right {
+    padding: 5px;
+    margin: 5px;
+    width: 80%;
+}
+
+#cursos span {
+    padding: 15px;
+    transition: .5s;
+}
+
+#cursos span:hover {
+    background: rgba(0, 0, 0, 0.514);
+    border-radius: 5px;
+}
+
+#title {
+    padding: 16px;
+    width: 235px;
+    background: rgba(0, 0, 0, 0.514);
+    cursor: pointer;
+}
+
+#container-a {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#usuario {
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0.514);
+}
+
+#home {
+    background: rgb(34, 34, 34);
+
+}
+#home h2{
+    text-align: center;
+    margin-bottom: 15px;
+}
+#user_identific {
+    color: aliceblue;
+    display: flex !important;
+    justify-content: center;
+    font-weight: bold;
+    background: rgb(34, 34, 34) !important;
+}
+
+#container-a fieldset {
+    text-align: center;
+    align-items: center;
+    margin: 5px;
+    margin-left: 15px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
+    padding: 25px;
+    background-color: rgb(93, 158, 255);
+}
+
+#container-b fieldset {
+    margin: 10px;
+}
+
+#cursos span,
+#aulas div {
+    cursor: pointer;
+}
+
+#itens {
+    display: flex;
+}
+
+#itens i {
+    cursor: pointer;
+    font-size: 50px;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+#itens i:hover {
+    font-size: 55px;
+    transition: .5s;
+}
+
+#user_identific label {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Classes */
+.titlefild {
+    display: flex;
+    background: rgba(0, 0, 0, 0.562);
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.itensDisplay {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    transition: .5s;
+    border-radius: 5px;
+}
+
+.itensDisplay:hover {
+    background: rgba(0, 0, 0, 0.514);
+}
+
+.itensOverflow::-webkit-scrollbar {
+    display: none;
+}
+
+.itensOverflow {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 100px;
+}
+
+@media (max-width:767px) {
+    body {
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+
+    main {
+        pointer-events: all;
+        position: relative;
+        grid-template-columns: 0% 100%;
+
+    }
+
+    #home {
+        width: 95vw;
+    }
+    #container-a {
+        flex-direction: column;
+
+    }
+    #container-b{
+        width: 100%;
+        
+    }  
+    #container-b fieldset{
+        width: 90vw;
+    }
+    #user_identific {
+        width: 90vw;
+    }
+
+    #itens {
+        width: 100vw;
+        padding: 5px;
+        margin-left: 15vw;
+        flex-direction: column;
+        height: 200px;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+
+    #itens fieldset {
+        width: 60vw;
+        padding: 30px;
+    }
+
+    #left {
+        position: absolute;
+        background: whitesmoke;
+        pointer-events: all;
+        transition: .5s;
+        left: 0;
+        border-radius: 0 0 20px 0;
+    }
+
+    .leftOpacityZero {
+        opacity: 0 !important;
+        pointer-events: none !important;
+        left: -100px !important;
+    }
+
+}
